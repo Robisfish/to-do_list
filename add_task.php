@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Make sure the task is not empty before inserting
     if (!empty($task)) {
         // Prepare the SQL statement to insert the task into the database
-        $stmt = $conn->prepare("INSERT INTO tasks (task) VALUES (?)");
+        $stmt = $conn->prepare("INSERT INTO task (task) VALUES (?)");
         $stmt->bind_param("s", $task); // Bind the task input to the SQL statement
 
         // Execute the query and check if it was successful
